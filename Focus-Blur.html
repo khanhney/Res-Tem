@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("input").focus(function(){
+					$(this).css({
+						'background-color':'#f1f1f1',
+						'color':'black',
+						'opacity':'0.5',
+					});
+				});
+				$("input").blur(function(){
+					$(this).css({
+						'background-color':'black',
+						'color':'white',
+						'opacity':'0.5',
+					});
+				});
+				$("#btnSubmit").on({
+					click:function(){
+						$('div').html(" <br>Welcome To My Website, ");
+						$('div').append($('#userName').val());
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<br>
+		<!-- Username : <input type="type" name="" id="userName"><br>
+		Password : <input type="password" name="" id="passWord"> -->
+		<table>
+			<tr>
+				<th>Username :</th>
+				<td><input type="type" name="" id="userName"></td>
+			</tr>
+			<tr>
+				<th>Password :</th>
+				<td><input type="password" name="" id="passWord"></td>
+			</tr>
+		</table>
+		<br>
+		<input type="button" id="btnSubmit" value="Click Here" name="" style="border-radius: 10px;">
+		<br>
+		<div id="trendResult" style="width: 200px;height: 100px;border: 1px solid black;"></div>
+	</body>
+</html>
